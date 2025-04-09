@@ -18,7 +18,11 @@ R = \max_{a_0,...,a_\infty} \sum_{t=0}^{\infty} \gamma^t r(s_t,a_t) = \max_{a_0}
 
 Here $r$ is the reward, $s$ is the state, $a$ is the action, $\gamma$ is the discount factor forcing the infinite horizon cost to be finite, and $t$ is time.
 
-If one chooses the actions $a$ which maximize $R$, i.e. follows the optimal policy, the reward $R$ does not depend on $a$. In this case it is customary refer to reward $R(a,s)$ as the "value function" $V(s)$.
+If we have a function $\pi$, which relates the actions to the states $a=\pi(s)$, we call it a policy. Given a specific policy, the reward function $R$ is only dependent on the state $s$. It's customary to refer the reward function in this case as the value function $V$.
+```
+R(a,s) = R(\pi(s),s) = V^\pi (s)
+```
+The value function of the optimal policy is usually marked as V* or simply V.
 
 ## Bellman Principle of Optimality Next Steps
 
