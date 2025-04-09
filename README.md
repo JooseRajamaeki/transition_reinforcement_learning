@@ -28,5 +28,5 @@ R = \max_{a_0,...,a_\infty} \sum_{t=0}^{\infty} \gamma^t r(s_t,a_t) = \max_{a_0,
 ```
 This can be written more briefly as:
 ```math
-R = V(s_0*) = \max_{a_0,...,a_T} \left[ \sum_{t=0}^{t=T} \gamma^t r(s_t,a_t) + V(s_{T+1}*)\right]
+R = V(s_0) = \max_{a_0,...,a_T} \left[ \sum_{t=0}^{t=T} \gamma^t r(s_t,a_t) + V(s_{T+1})\right]
 ```
