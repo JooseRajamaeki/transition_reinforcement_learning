@@ -34,3 +34,7 @@ This can be written more briefly as:
 ```math
 R = V(s_0) = \max_{a_0,...,a_T} \left[ \sum_{t=0}^{t=T} \gamma^t r(s_t,a_t) + V(s_{T+1})\right]
 ```
+Now we can see something interesting about the beginning of the optimal policy. Usually we use the Bellman optimality principle to compute the value function of the current state from the future state. But now the key observation is that beginning of the optimal policy has a conditionally optimal subpolicy, which must lead to the optimal state at time T+1. In equation form:
+```math
+R = V(s_0) = \max_{a_0,...,a_T,s_{T+1}=s*} \left[ \sum_{t=0}^{t=T} \gamma^t r(s_t,a_t) \right] + V(s_{T+1})
+```
