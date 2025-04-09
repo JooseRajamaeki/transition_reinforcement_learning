@@ -9,7 +9,7 @@ This means that any subpolicy of an optimal policy is itself an optimal policy. 
 
 The principle is often presented in the formula form.
 ```math
-\max_{\mathbf{a}_0,...,\mathbf{a}_\infty} \sum_{t=0}^{\infty} \gamma^t r(\mathbf{s}_t,\mathbf{a}_t) &=& \max_{\mathbf{a}_0} \left[ \gamma^0 r(\mathbf{s}_0,\mathbf{a}_0) + \max_{\mathbf{a}_1,...,\mathbf{a}_\infty} \sum_{t=1}^\infty \gamma^t r(\mathbf{s}_t,\mathbf{a}_t)\right]
+\max_{a_0,...,a_\infty} \sum_{t=0}^{\infty} \gamma^t r(s_t,a_t) = \max_{a_0} \left[ \gamma^0 r(s_0,a_0) + \max_{a_1,...,a_\infty} \sum_{t=1}^\infty \gamma^t r(s_t,a_t)\right]
 ```
 
 Here $r$ is the reward, $s$ is the state, $a$ is the action, $\gamma$ is the discount factor forcing the infinite horizon cost finite, and $t$ is time.
