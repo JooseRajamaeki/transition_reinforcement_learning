@@ -22,5 +22,5 @@ Here $r$ is the reward, $s$ is the state, $a$ is the action, $\gamma$ is the dis
 
 The insight to cast the reinforcement learning problem to a supervised learning problem comes from expanding the Bellman optimality principle:
 ```math
-\max_{a_0,...,a_\infty} \sum_{t=0}^{\infty} \gamma^t r(s_t,a_t) = \max_{a_0,...,a_T} \left[ \sum_{t=0}^{t=T} \gamma^t r(s_t,a_t) + \max_{a_{T+1},...,a_\infty} \sum_{t=t}^\infty \gamma^t r(s_t,a_t)\right]
+\max_{a_0,...,a_\infty} \sum_{t=0}^{\infty} \gamma^t r(s_t,a_t) = \max_{a_0,...,a_T} \left[ \sum_{t=0}^{t=T} \gamma^t r(s_t,a_t) + \max_{a_{T+1},...,a_\infty} \sum_{t=T+1}^\infty \gamma^t r(s_t,a_t)\right]
 ```
