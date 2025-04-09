@@ -1,6 +1,10 @@
 # Transition Reinforcement Learning
 
-This document outlines a new approach to reinforcement learning. We'll need to start from the fundamentals. The [Bellman optimality principle](https://en.wikipedia.org/wiki/Bellman_equation) states:
+This document outlines a way to cast reinforcement learning problems to supervised learning problems.
+
+## Bellman Principle of Optimality
+
+We'll need to start from the fundamentals. The [Bellman optimality principle](https://en.wikipedia.org/wiki/Bellman_equation) states:
 
 > An optimal policy has the property that whatever the initial state and initial decision are, the remaining decisions must constitute an optimal policy with regard to the state resulting from the first decision.
 
@@ -12,4 +16,11 @@ The principle is often presented in the formula form.
 \max_{a_0,...,a_\infty} \sum_{t=0}^{\infty} \gamma^t r(s_t,a_t) = \max_{a_0} \left[ \gamma^0 r(s_0,a_0) + \max_{a_1,...,a_\infty} \sum_{t=1}^\infty \gamma^t r(s_t,a_t)\right]
 ```
 
-Here $r$ is the reward, $s$ is the state, $a$ is the action, $\gamma$ is the discount factor forcing the infinite horizon cost finite, and $t$ is time.
+Here $r$ is the reward, $s$ is the state, $a$ is the action, $\gamma$ is the discount factor forcing the infinite horizon cost to be finite, and $t$ is time.
+
+## Bellman Principle of Optimality Next Steps
+
+The insight to cast the reinforcement learning problem to a supervised learning problem comes from expanding the Bellman optimality principle:
+```math
+\max_{a_0,...,a_\infty} \sum_{t=0}^{\infty} \gamma^t r(s_t,a_t) = \max_{a_0,...,a_T} \left[ \sum_{t=0}^{t=T} \gamma^t r(s_t,a_t) + \max_{a_{T+1},...,a_\infty} \sum_{t=t}^\infty \gamma^t r(s_t,a_t)\right]
+```
