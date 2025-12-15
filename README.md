@@ -41,4 +41,4 @@ R = V(s_0) = \max_{a_0,...,a_T,s_{T+1}=s*} \left[ \sum_{t=0}^{t=T} \gamma^t r(s_
 Notice how the optimization doesn't depend on $V(s*)$ because it's conditioned so that the sequence of actions leads to state $s*$. In other words *the optimal policy is a series of optimal transitions between optimal states*.
 
 To cast this to our previous example:
-> It's given that the shortest route from Helsinki to Turku is Helsinki–Lohja–Salo–Turku. We know that we'll want to end in Salo. The route must begin by the optimal transition to Salo, which is Helsinki-Lohja-Salo. Thus Helsinki-Tampere-Salo transition will not be present on the optimal route.
+> It's given that the shortest route from Helsinki to Turku is Helsinki–Lohja–Salo–Turku. We know that we'll want to go through the optimal state of Salo. The route must begin by the optimal transition to Salo, which is Helsinki-Lohja-Salo. Thus for example Helsinki-Tampere-Salo transition will not be present on the optimal route.
